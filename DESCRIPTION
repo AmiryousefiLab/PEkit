@@ -1,0 +1,32 @@
+Package: PEkit
+Title: Supervised predictive Classification under Partition Exchangeability
+Version: 0.0.0.9000
+Authors@R: c(
+    person(given = "Ville",
+           family = "Kinnula",
+           role = c("aut", "cre"),
+           email = "kinnula.ville@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+    person(given = "Jing",
+           family = "Tang",
+           role = c("aut"),
+           email = "jing.tang@helsinki.com",
+           comment = c(ORCID = "YOUR-ORCID-ID")),       
+    person(given = "Ali",
+           family = "Amiryousefi",
+           role = c("aut"),
+           email = "kinnula.ville@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))       
+           )
+Description: This package implements a supervised predictive classifier under partition exchangeability (Zabell 1992 <https://doi.org/10.1007/BF00485351>). The two classifiers implemented are a marginal classifier that assumes test data is i.i.d., and a more computationally costly but more accurate simultaneous classifier that tries to find a labeling for the entire test dataset at once, using all of the test data to predict each label (Amiryousefi (2021) <arXiv2101.10950>). We present functions to simulate samples and gain sample probabilities from the Ewens sampling formula (or Poisson-Dirichlet distribution). Parameter estimation and a hypothesis testing function of the distribution are included [Ewens (1973) <https://doi.org/10.1016/0040-5809(72)90035-4>]. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9001
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    stats (>= 4.1.0),
+    Rmpfr (>= 0.8.4)
