@@ -9,17 +9,20 @@ dPD(abund, psi)
 \arguments{
 \item{abund}{An abundance vector.}
 
-\item{psi}{Dispersal parameter. Accepted values are positive real numbers, "a" for absolute value \eqn{\psi}=1 by default, or "r" for relative value \eqn{\psi} equals sample size.}
+\item{psi}{Dispersal parameter. Accepted input values are positive real
+numbers, "a" for absolute value \eqn{\psi}=1 by default, or "r" for relative
+value \eqn{\psi=n}, where \eqn{n} is the size of the input sample.}
 }
 \value{
-\code{dPD} returns the probability of the abundance vector of the data vector \code{x}, given dispersal parameter \eqn{\psi}.
+The probability of the Poisson-Dirichlet distribution for the input
+abundance vector, e.g. an exchangeable random partition,  and a dispersal parameter \eqn{\psi}.
 }
 \description{
 Distribution function for the Poisson-Dirichlet distribution.
 }
 \details{
-\code{dPD} calculates the probability of a data vector \code{x} given by the Poisson-Dirichlet distribution,
-also known as the Ewens sampling formula. The higher the
+Given an abundance vector \code{abunds}, \code{dPD()} calculates the probability
+of a data vector \code{x} given by the Poisson-Dirichlet distribution. The higher the
 dispersal parameter \eqn{\psi}, the higher the amount of distinct observed
 species. In terms of the paintbox process, a high \eqn{\psi} increases the
 size of the continuous part \eqn{p_0} of the process, while a low \eqn{\psi} will increase

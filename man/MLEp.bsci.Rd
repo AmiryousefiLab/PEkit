@@ -7,7 +7,7 @@
 MLEp.bsci(x, level = 0.95, rounds = 1000, frac = 0.8)
 }
 \arguments{
-\item{x}{A categorical data vector.}
+\item{x}{A data vector.}
 
 \item{level}{Level of confidence interval as number between 0 and 1.}
 

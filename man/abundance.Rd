@@ -7,7 +7,7 @@
 abundance(x)
 }
 \arguments{
-\item{x}{Categorical data vector \code{x}.}
+\item{x}{Data vector \code{x}.}
 }
 \value{
 This function returns a named vector with the frequencies of the frequencies in the data vector x.
@@ -17,8 +17,8 @@ the unique values in \code{table(x)} become the names of the values, while the v
 themselves are the frequencies of the frequencies of data vector \code{x}.
 }
 \description{
-A function to calculate frequencies of frequencies of discrete or partly discrete
-data vector \code{x}.
+A function to calculate the abundance vector, or frequencies of frequencies of discrete or partly discrete
+data vector \code{x}. The abundance vector is used as input in the functions \code{dPD()}, \code{MLEp()}, and \code{LMTp()}.
 }
 \details{
 This function is equivalent to \code{table(table(x))}.

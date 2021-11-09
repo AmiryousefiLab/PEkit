@@ -2,12 +2,12 @@
 % Please edit documentation in R/Neutrality_tests.R
 \name{tPD}
 \alias{tPD}
-\title{Watterson's homozygosity test}
+\title{Test for the shape of the distribution}
 \usage{
 tPD(x, rounds)
 }
 \arguments{
-\item{x}{A data vector.}
+\item{x}{A discrete data vector.}
 
 \item{rounds}{How many samples are simulated to obtain the empirical distribution.}
 }
@@ -20,6 +20,14 @@ sample's underlying distribution is the Poisson-Dirichlet distribution. It
 calculates a test statistic that is then used to gain a p-value from an
 empirical distribution of the statistic from simulated samples from a
 PD distribution.
+}
+\details{
+The calculated test statistic is \deqn{W=\sum_{i=1}^n n_i^2 / n ,}
+which is calculated from the sample. Here \eqn{n_i} are the frequencies of each unique value in the sample.
+The MLE of \eqn{\psi} is then estimated from the sample with the function \code{MLEp()}, and an amount of samples
+equal to the input parameter \code{rounds} are generated with that estimate of \eqn{psi}
+and sample size \eqn{n}. The test statistic \eqn{W} is then calculated for each of thowe simulated samples.
+The original \eqn{W} is then given a p-value based on what percentage of the simulated \eqn{W} it exceeds.
 }
 \examples{
 ##Test whether a typical sample follows PD:

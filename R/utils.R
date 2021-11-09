@@ -2,7 +2,7 @@
 #'
 #' A function to calculate the abundance vector, or frequencies of frequencies of discrete or partly discrete
 #' data vector `x`. The abundance vector is used as input in the functions `dPD()`, `MLEp()`, and `LMTp()`.
-#' @param x Categorical data vector `x`.
+#' @param x Data vector `x`.
 #' @keywords abundance
 #' @details This function is equivalent to `table(table(x))`.
 #' @return This function returns a named vector with the frequencies of the frequencies in the data vector x.
