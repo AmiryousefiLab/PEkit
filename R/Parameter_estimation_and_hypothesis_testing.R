@@ -126,13 +126,13 @@ MLEp.bsci<-function(x, level=0.95, rounds=1000, frac=0.8) {
 #' ## Find the abundance of the data vector:
 #' abund=abundance(x)
 #' ## Test for the psi that was used, as well as a higher and a lower one:
-#' LMTp(abund, 10)
-#' LMTp(abund, 15)
-#' LMTp(abund, 5)
-#' LMTp(abund)       #test for psi=1
-#' LMTp(abund, "r")  #test for psi=n
+#' sample.test(abund, 10)
+#' sample.test(abund, 15)
+#' sample.test(abund, 5)
+#' sample.test(abund)       #test for psi=1
+#' sample.test(abund, "r")  #test for psi=n
 
-LMTp <- function(abund, psi="a") {
+sample.test <- function(abund, psi="a") {
   n<-sum(as.integer(names(abund))*abund)
   k<-sum(abund)
   if (psi=="a") {
@@ -178,12 +178,12 @@ LMTp <- function(abund, psi="a") {
 #' y<-rPD(1000, 20)
 #' z<-rPD(800, 30)
 #' ##Run tests
-#' twosampletest(x,y)
-#' twosampletest(x,z)
-#' twosampletest(y,z)
+#' two.sample.test(x,y)
+#' two.sample.test(x,z)
+#' two.sample.test(y,z)
 
 
-twosampletest<- function(s1 ,s2) {
+two.sample.test<- function(s1 ,s2) {
   #estimate psi1 and psi2 for H_1 and psi for H_0
 
   #n1<-sum(as.integer(names(abund))*abund)
@@ -266,9 +266,9 @@ twosampletest<- function(s1 ,s2) {
 #' z<-c( rPD(800, 30), rep(NA, 400) )
 #' samples<-cbind(cbind(x, y), z)
 #' ##Run test
-#' dsampletest(samples)
+#' mult.sample.test(samples)
 
-dsampletest<- function(x) {
+mult.sample.test<- function(x) {
   #estimate psi1 and psi2 for H_1 and psi for H_0
 
   #n1<-sum(as.integer(names(abund))*abund)
