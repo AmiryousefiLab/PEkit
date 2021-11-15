@@ -7,7 +7,7 @@
 tSimLab(training, x)
 }
 \arguments{
-\item{training}{A training data object from the function \code{classifier.fit}.}
+\item{training}{A training data object from the function \code{classifier.fit()}.}
 
 \item{x}{Test data vector or matrix with rows as data points and columns as features.}
 }
@@ -15,7 +15,7 @@ tSimLab(training, x)
 A vector of predicted labels for test data x.
 }
 \description{
-\code{tSimLab} classifies the test data \code{x} based on the training data object.
+Classifies the test data \code{x} based on the training data object.
 All of the test data is used simultaneously to make the classification.
 }
 \details{
@@ -72,7 +72,7 @@ partition exchangeability. . 2021. \url{https://arxiv.org/abs/2101.10950}.
 
 Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 Principles of Bayesian predictive classification revisited. Springer, Stat.
-Comput. 23, (2011), 59–73.(\url{https://doi.org/10.1007/s11222-011-9291-7})
+Comput. 23, (2011), 59–73, (\url{https://doi.org/10.1007/s11222-011-9291-7}).
 }
 \keyword{Simultaneous}
 \keyword{classifier}

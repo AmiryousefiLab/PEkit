@@ -17,7 +17,7 @@ Authors@R: c(
            role = c("ctb"),
            email = "jing.tang@helsinki.fi",
            comment = c(ORCID = "0000-0001-7480-7710")))
-Description: Partition exchangeabilty supervised predictive classifiers, parameter tests and estimation. This package implements a supervised predictive classifier under partition exchangeability. The two classifiers implemented are a marginal classifier that assumes test data is i.i.d., and a more computationally costly but more accurate simultaneous classifier that tries to find a labeling for the entire test dataset at once, using all of the test data to predict each label. We present functions to simulate samples and gain sample probabilities from the Ewens sampling formula (or Poisson-Dirichlet distribution). Parameter estimation and a hypothesis testing function of the distribution are included. 
+Description: This package implements the Bayesian supervised predictive classifiers, hypothesis testing, and parametric estimation under Partition Exchangeability. The two classifiers implemented are a marginal classifier that assumes test data is i.i.d., next to a more computationally costly but accurate simultaneous classifier that finds a labelling for the entire test dataset at once, using all the test data to predict each label. We also provide the Maximum Likelihood Estimation (MLE) of the only underlying parameter of the partition exchangeability generative model as well as hypothesis testing statistics for equality of this parameter with a single value, alternative, or multiple samples. We present functions to simulate the sequences from Ewens Sampling Formula as the realisation of the Poisson-Dirichlet distribution and their respective probabilities.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -27,5 +27,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
-    stats (>= 4.1.0),
-    Rmpfr (>= 0.8.4)
+    stats (>= 4.1.0)

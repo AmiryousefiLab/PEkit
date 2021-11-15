@@ -25,7 +25,7 @@ where L is the likelihood function of observing the two input samples given
 a single \eqn{\psi} in the numerator and two different parameters \eqn{\psi_1}
 and \eqn{\psi_2} for each sample respectively in the denominator. According
 to the theory of Likelihood Ratio Tests, this statistic converges in
-distribution to a \eqn{\chi_d^2}-distribution, where \eqn{d} is the
+distribution to a \eqn{\chi_d^2}-distribution under the null-hypothesis, where \eqn{d} is the
 difference in the amount of parameters between the considered models, which
 is 1 here. To calculate the statistic, the Maximum Likelihood Estimate for
 \eqn{\psi_1,\: \psi_2} of \eqn{H_1} and the shared \eqn{\psi} of \eqn{H_0}

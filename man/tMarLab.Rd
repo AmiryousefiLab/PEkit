@@ -7,7 +7,7 @@
 tMarLab(training, x)
 }
 \arguments{
-\item{training}{A training data object from the function \code{classifier.fit}.}
+\item{training}{A training data object from the function \code{classifier.fit()}.}
 
 \item{x}{Test data vector or matrix with rows as data points and columns as features.}
 }
@@ -15,7 +15,7 @@ tMarLab(training, x)
 A vector of predicted labels for test data x.
 }
 \description{
-\code{tMarLab} classifies the test data \code{x} based on the training data object.
+Classifies the test data \code{x} based on the training data object.
 The test data is considered i.i.d., so each
 data point is classified one by one.
 }
@@ -25,7 +25,7 @@ Independently assigns a class label for each test data point according to a
 \eqn{x_i} arising from class \eqn{c} assuming the training data of size \eqn{m_c} in the class
 arises from a Poisson-Dirichlet(\eqn{\hat{\psi}_c}) distribution is:
 \deqn{\hat{\psi}_c / (m_c + \hat{\psi}_c),}
-if no value equal to \eqn{x_i} exists in the training data of class \eqn{c},and
+if no value equal to \eqn{x_i} exists in the training data of class \eqn{c}, and
 \deqn{m_{ci} / (m_c + \hat{\psi}_c),}
 if there does, where \eqn{m_{ci}} is the frequency of the value of \eqn{x_i}
 in the training data.
@@ -77,7 +77,7 @@ partition exchangeability. . 2021. \url{https://arxiv.org/abs/2101.10950}.
 
 Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 Principles of Bayesian predictive classification revisited. Springer, Stat.
-Comput. 23, (2011), 59–73. (\url{https://doi.org/10.1007/s11222-011-9291-7})
+Comput. 23, (2011), 59–73, (\url{https://doi.org/10.1007/s11222-011-9291-7}).
 }
 \keyword{Marginal}
 \keyword{classifier}

@@ -6,17 +6,17 @@
 #' @param y training data label vector of length equal to the amount of rows in `x`.
 #' @details This function is used to learn the model parameters from the
 #' training data, and gather them into an object that is used by the
-#' classification algorithms `tMarLab` and `tSimLab`. The parameters it learns
+#' classification algorithms `tMarLab()` and `tSimLab()`. The parameters it learns
 #' are the Maximum Likelihood Estimate of the \eqn{\psi} of each feature within
 #' each class in the training data. It also records the frequencies of the data
 #' for each feature within each class as well. These are used in calculating the
 #' predictive probability of each test data being in each of the classes.
 #' @return Returns an object used as training data objects for the classification
-#' algorithms `tMarLab` and `tSimLab`.
+#' algorithms `tMarLab()` and `tSimLab()`.
 #' @return If `x` is multidimensional, each list described below is returned for each dimension.
 #' @return Returns a list of classwise lists, each with components:
 #' @return `frequencies`: the frequencies of values in the class.
-#' @return `psi`: the Maximum Likelihood estimate for \eqn{\psi} for the class.
+#' @return `psi`: the Maximum Likelihood estimate of \eqn{\psi} for the class.
 #' @keywords Fit training data
 #' @export
 #' @examples
@@ -68,10 +68,10 @@ classifier.fit <- function(x, y) {
 
 #' Marginally predicted labels of the test data given training data classification.
 #'
-#' `tMarLab` classifies the test data `x` based on the training data object.
+#' Classifies the test data `x` based on the training data object.
 #' The test data is considered i.i.d., so each
 #' data point is classified one by one.
-#' @param training A training data object from the function `classifier.fit`.
+#' @param training A training data object from the function `classifier.fit()`.
 #' @param x Test data vector or matrix with rows as data points and columns as features.
 #' @return A vector of predicted labels for test data x.
 #' @keywords Marginal classifier
@@ -80,14 +80,14 @@ classifier.fit <- function(x, y) {
 #' partition exchangeability. . 2021. <https://arxiv.org/abs/2101.10950>.
 #' @references Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 #' Principles of Bayesian predictive classification revisited. Springer, Stat.
-#' Comput. 23, (2011), 59–73. (<https://doi.org/10.1007/s11222-011-9291-7>)
+#' Comput. 23, (2011), 59–73, (<https://doi.org/10.1007/s11222-011-9291-7>).
 #' @details
 #' Independently assigns a class label for each test data point according to a
 #' \eqn{maximum \, a \, posteriori} rule. The predictive probability of data point
 #' \eqn{x_i} arising from class \eqn{c} assuming the training data of size \eqn{m_c} in the class
 #' arises from a Poisson-Dirichlet(\eqn{\hat{\psi}_c}) distribution is:
 #' \deqn{\hat{\psi}_c / (m_c + \hat{\psi}_c),}
-#'  if no value equal to \eqn{x_i} exists in the training data of class \eqn{c},and
+#'  if no value equal to \eqn{x_i} exists in the training data of class \eqn{c}, and
 #' \deqn{m_{ci} / (m_c + \hat{\psi}_c),}
 #' if there does, where \eqn{m_{ci}} is the frequency of the value of \eqn{x_i}
 #' in the training data.
@@ -171,9 +171,9 @@ tMarLab <- function(training, x) {
 
 #' Simultaneously predicted labels of the test data given the training data classification.
 #'
-#' `tSimLab` classifies the test data `x` based on the training data object.
+#' Classifies the test data `x` based on the training data object.
 #' All of the test data is used simultaneously to make the classification.
-#' @param training A training data object from the function `classifier.fit`.
+#' @param training A training data object from the function `classifier.fit()`.
 #' @param x Test data vector or matrix with rows as data points and columns as features.
 #' @return A vector of predicted labels for test data x.
 #' @keywords Simultaneous classifier
@@ -189,7 +189,7 @@ tMarLab <- function(training, x) {
 #' partition exchangeability. . 2021. <https://arxiv.org/abs/2101.10950>.
 #' @references Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 #' Principles of Bayesian predictive classification revisited. Springer, Stat.
-#' Comput. 23, (2011), 59–73.(<https://doi.org/10.1007/s11222-011-9291-7>)
+#' Comput. 23, (2011), 59–73, (<https://doi.org/10.1007/s11222-011-9291-7>).
 #' @examples
 #' ## Create random samples x from Poisson-Dirichlet distributions with different
 #' ## psis, treating each sample as coming from a class of its own:

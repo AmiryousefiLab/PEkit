@@ -13,7 +13,7 @@ classifier.fit(x, y)
 }
 \value{
 Returns an object used as training data objects for the classification
-algorithms \code{tMarLab} and \code{tSimLab}.
+algorithms \code{tMarLab()} and \code{tSimLab()}.
 
 If \code{x} is multidimensional, each list described below is returned for each dimension.
 
@@ -21,7 +21,7 @@ Returns a list of classwise lists, each with components:
 
 \code{frequencies}: the frequencies of values in the class.
 
-\code{psi}: the Maximum Likelihood estimate for \eqn{\psi} for the class.
+\code{psi}: the Maximum Likelihood estimate of \eqn{\psi} for the class.
 }
 \description{
 Fits the model according to training data x, where x is assumed to follow
@@ -30,7 +30,7 @@ the Poisson-Dirichlet distribution, and discrete labels y.
 \details{
 This function is used to learn the model parameters from the
 training data, and gather them into an object that is used by the
-classification algorithms \code{tMarLab} and \code{tSimLab}. The parameters it learns
+classification algorithms \code{tMarLab()} and \code{tSimLab()}. The parameters it learns
 are the Maximum Likelihood Estimate of the \eqn{\psi} of each feature within
 each class in the training data. It also records the frequencies of the data
 for each feature within each class as well. These are used in calculating the

@@ -12,14 +12,13 @@ rPD(n, psi)
 \item{psi}{dispersal parameter.}
 }
 \value{
-\code{rPD} returns a vector with a sample of size \eqn{n} from the Hoppe urn model with parameter \eqn{\psi}, along with its table of frequencies.
-given parameter \eqn{\psi}.
+Returns a vector with a sample of size \eqn{n} from the Hoppe urn model with parameter \eqn{\psi}.
 }
 \description{
 rPD samples randomly from the PD distribution with a given \eqn{\psi} by simulating the Hoppe urn model.
 }
 \details{
-\code{rPD} samples random values with a given \eqn{\psi} from the Poisson-Dirichlet distribution by simulating the Hoppe urn model.
+Samples random values with a given \eqn{\psi} from the Poisson-Dirichlet distribution by simulating the Hoppe urn model.
 }
 \examples{
 ## Get random sample from the PD distribution with different psi,

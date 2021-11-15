@@ -3,19 +3,19 @@
 #' Distribution function for the Poisson-Dirichlet distribution.
 #' @usage dPD(abund, psi)
 #' @param abund An abundance vector.
-#' @param psi Dispersal parameter. Accepted input values are positive real
+#' @param psi Dispersal parameter \eqn{\psi}. Accepted input values are positive real
 #' numbers, "a" for absolute value \eqn{\psi}=1 by default, or "r" for relative
 #' value \eqn{\psi=n}, where \eqn{n} is the size of the input sample.
 #' @return The probability of the Poisson-Dirichlet distribution for the input
 #' abundance vector, e.g. an exchangeable random partition,  and a dispersal parameter \eqn{\psi}.
 #' @keywords Poisson-Dirichlet distribution
 #' @export
-#' @details Given an abundance vector `abunds`, `dPD()` calculates the probability
+#' @details Given an abundance vector `abunds`, calculates the probability
 #' of a data vector `x` given by the Poisson-Dirichlet distribution. The higher the
 #' dispersal parameter \eqn{\psi}, the higher the amount of distinct observed
 #' species. In terms of the paintbox process, a high \eqn{\psi} increases the
 #' size of the continuous part \eqn{p_0} of the process, while a low \eqn{\psi} will increase
-#' the size of the discrete parts \eqn{p_>0}.
+#' the size of the discrete parts \eqn{p_{\neq 0}}.
 #' @references W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
 #' 1972, Pages 87-112, ISSN 0040-5809, <https://doi.org/10.1016/0040-5809(72)90035-4>.
 #' @examples
@@ -74,15 +74,14 @@ dlPD <- function(abund, psi="a") {
 #' @param n number of observations.
 #' @param psi dispersal parameter.
 #' @usage rPD(n, psi)
-#' @return `rPD` returns a vector with a sample of size \eqn{n} from the Hoppe urn model with parameter \eqn{\psi}, along with its table of frequencies.
-#' given parameter \eqn{\psi}.
+#' @return Returns a vector with a sample of size \eqn{n} from the Hoppe urn model with parameter \eqn{\psi}.
 #' @keywords Poisson-Dirichlet distribution
 #' @export
 #' @references Hoppe, F.M. The sampling theory of neutral alleles and an urn model in population genetics.
 #'  J. Math. Biology 25, 123–159 (1987). <https://doi.org/10.1007/BF00276386>.
 #' @references W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
 #' 1972, Pages 87-112, ISSN 0040-5809, <https://doi.org/10.1016/0040-5809(72)90035-4>.
-#' @details `rPD` samples random values with a given \eqn{\psi} from the Poisson-Dirichlet distribution by simulating the Hoppe urn model.
+#' @details Samples random values with a given \eqn{\psi} from the Poisson-Dirichlet distribution by simulating the Hoppe urn model.
 #' @examples
 #' ## Get random sample from the PD distribution with different psi,
 #' ## and estimate the psi of the samples:

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Parameter_estimation_and_hypothesis_testing.R
 \name{mult.sample.test}
 \alias{mult.sample.test}
-\title{Test for \eqn{\psi} of \eqn{d} samples}
+\title{Test for \eqn{\psi} of multiple samples}
 \usage{
 mult.sample.test(x)
 }
@@ -15,17 +15,17 @@ p-value of the test \code{p}.
 }
 \description{
 Likelihood ratio test for the hypotheses \eqn{H_0: \: \psi_1=\psi_2=...=\psi_d} and
-\eqn{H_1: \: \psi_1 \neq \psi_2 \neq ... \neq \psi_d}, where \eqn{\psi_1}...\eqn{\psi_d} are the
+\eqn{H_1: \: \psi_1 \neq \psi_2 \neq ... \neq \psi_d}, where \eqn{\psi_1,\psi_2,}...\eqn{,\psi_d} are the
 dispersal parameters of the \eqn{d} samples in the columns of the input data array \code{x}.
 }
 \details{
 Calculates the Likelihood Ratio Test statistic
 \deqn{-2log(L(\hat{\psi})/L(\hat{\psi}_1, \hat{\psi}_2, ..., \hat{\psi}_d)),}
 where L is the likelihood function of observing the \eqn{d} input samples given
-a single \eqn{\psi} in the numerator and \eqn{d} different parameters \eqn{\psi_1}...\eqn{\psi}
+a single \eqn{\psi} in the numerator and \eqn{d} different parameters \eqn{\psi_1,\psi_2,}...\eqn{,\psi_d}
 for each sample respectively in the denominator. According
 to the theory of Likelihood Ratio Tests, this statistic converges in
-distribution to a \eqn{\chi_{d-1}^2}-distribution, where \eqn{d-1} is the
+distribution to a \eqn{\chi_{d-1}^2}-distribution when the null-hypothesis is true, where \eqn{d-1} is the
 difference in the amount of parameters between the considered models. To
 calculate the statistic, the Maximum Likelihood Estimate for
 \eqn{\psi_1,\: \psi_2,\: ..., \: \psi_d} of \eqn{H_1} and the shared \eqn{\psi} of \eqn{H_0}

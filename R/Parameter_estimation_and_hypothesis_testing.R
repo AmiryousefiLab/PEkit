@@ -86,7 +86,7 @@ MLEp<- function(abund) {
 MLEp.bsci<-function(x, level=0.95, rounds=1000, frac=0.8) {
   if(frac<0.0 || frac>1.0) {
     print("frac must be a number between 0 and 1")
-    break
+    return(NULL)
   }
 
   n_bootstrap<- rounds
@@ -166,7 +166,7 @@ sample.test <- function(abund, psi="a") {
 #' a single \eqn{\psi} in the numerator and two different parameters \eqn{\psi_1}
 #' and \eqn{\psi_2} for each sample respectively in the denominator. According
 #' to the theory of Likelihood Ratio Tests, this statistic converges in
-#' distribution to a \eqn{\chi_d^2}-distribution, where \eqn{d} is the
+#' distribution to a \eqn{\chi_d^2}-distribution under the null-hypothesis, where \eqn{d} is the
 #' difference in the amount of parameters between the considered models, which
 #' is 1 here. To calculate the statistic, the Maximum Likelihood Estimate for
 #' \eqn{\psi_1,\: \psi_2} of \eqn{H_1} and the shared \eqn{\psi} of \eqn{H_0}
@@ -227,7 +227,7 @@ two.sample.test<- function(s1 ,s2) {
   #test statistic
   L<- -2*( dlPD(abundance(s1), psi) + dlPD(abundance(s2), psi) -
              dlPD(abundance(s1), psi1) - dlPD(abundance(s2), psi2))
-  p<-pchisq(L, 1, lower.tail=F)
+  p<-stats::pchisq(L, 1, lower.tail=F)
 
   return(c("Lambda"=L, "p-value"=p))
 }
@@ -235,10 +235,10 @@ two.sample.test<- function(s1 ,s2) {
 
 
 
-#' Test for \eqn{\psi} of \eqn{d} samples
+#' Test for \eqn{\psi} of multiple samples
 #'
 #' Likelihood ratio test for the hypotheses \eqn{H_0: \: \psi_1=\psi_2=...=\psi_d} and
-#' \eqn{H_1: \: \psi_1 \neq \psi_2 \neq ... \neq \psi_d}, where \eqn{\psi_1}...\eqn{\psi_d} are the
+#' \eqn{H_1: \: \psi_1 \neq \psi_2 \neq ... \neq \psi_d}, where \eqn{\psi_1,\psi_2,}...\eqn{,\psi_d} are the
 #' dispersal parameters of the \eqn{d} samples in the columns of the input data array `x`.
 #' @param x The data array to be tested. Each column of `x` is an independent sample.
 #' @return Gives a vector with the Likelihood Ratio Test -statistic `Lambda`, as well as the
@@ -250,10 +250,10 @@ two.sample.test<- function(s1 ,s2) {
 #' @details Calculates the Likelihood Ratio Test statistic
 #' \deqn{-2log(L(\hat{\psi})/L(\hat{\psi}_1, \hat{\psi}_2, ..., \hat{\psi}_d)),}
 #' where L is the likelihood function of observing the \eqn{d} input samples given
-#' a single \eqn{\psi} in the numerator and \eqn{d} different parameters \eqn{\psi_1}...\eqn{\psi}
+#' a single \eqn{\psi} in the numerator and \eqn{d} different parameters \eqn{\psi_1,\psi_2,}...\eqn{,\psi_d}
 #' for each sample respectively in the denominator. According
 #' to the theory of Likelihood Ratio Tests, this statistic converges in
-#' distribution to a \eqn{\chi_{d-1}^2}-distribution, where \eqn{d-1} is the
+#' distribution to a \eqn{\chi_{d-1}^2}-distribution when the null-hypothesis is true, where \eqn{d-1} is the
 #' difference in the amount of parameters between the considered models. To
 #' calculate the statistic, the Maximum Likelihood Estimate for
 #' \eqn{\psi_1,\: \psi_2,\: ..., \: \psi_d} of \eqn{H_1} and the shared \eqn{\psi} of \eqn{H_0}
@@ -317,7 +317,7 @@ mult.sample.test<- function(x) {
   }
 
   L<- -2* ( sum(apply(x, 2, function(z) dlPD(abundance(z[!is.na(z)]), psi))) - sum(denominator) )
-  p<-pchisq(L, d-1, lower.tail=F)
+  p<-stats::pchisq(L, d-1, lower.tail=F)
 
   return(c("Lambda"=L, "p-value"=p))
 }
