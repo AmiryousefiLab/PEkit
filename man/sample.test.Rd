@@ -42,7 +42,7 @@ sample.test(abund, "r")  #test for psi=n
 Radhakrishna Rao, C, (1948), Large sample tests of statistical
 hypotheses concerning several parameters with applications to problems of
 estimation. Mathematical Proceedings of the Cambridge Philosophical Society,
-44(1), 50-57. \url{https://doi.org/10.1017/S0305004100023987}
+44(1), 50-57. <\doi{10.1017/S0305004100023987}>
 }
 \keyword{score}
 \keyword{test}

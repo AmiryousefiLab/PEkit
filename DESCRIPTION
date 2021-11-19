@@ -1,23 +1,23 @@
 Package: PEkit
-Title: Partition Exchangeability toolkit
-Version: 1.0.0.0000
+Title: Partition Exchangeability Toolkit
+Version: 1.0.0.9000
 Authors@R: c(
     person(given = "Ville",
            family = "Kinnula",
            role = c("aut"),
            email = "ville.kinnula@helsinki.fi",
            comment = c()),
-    person(given = "Ali",
-           family = "Amiryousefi",
-           role = c("aut", "cre"),
-           email = "ali.amiryousefi@helsinki.fi",
-           comment = c(ORCID = "0000-0002-6317-3860")),
     person(given = "Jing",
            family = "Tang",
            role = c("ctb"),
            email = "jing.tang@helsinki.fi",
-           comment = c(ORCID = "0000-0001-7480-7710")))
-Description: This package implements the Bayesian supervised predictive classifiers, hypothesis testing, and parametric estimation under Partition Exchangeability. The two classifiers implemented are a marginal classifier that assumes test data is i.i.d., next to a more computationally costly but accurate simultaneous classifier that finds a labelling for the entire test dataset at once, using all the test data to predict each label. We also provide the Maximum Likelihood Estimation (MLE) of the only underlying parameter of the partition exchangeability generative model as well as hypothesis testing statistics for equality of this parameter with a single value, alternative, or multiple samples. We present functions to simulate the sequences from Ewens Sampling Formula as the realisation of the Poisson-Dirichlet distribution and their respective probabilities.
+           comment = c(ORCID = "0000-0001-7480-7710")),
+    person(given = "Ali",
+           family = "Amiryousefi",
+           role = c("aut", "cre"),
+           email = "ali.amiryousefi@helsinki.fi",
+           comment = c(ORCID = "0000-0002-6317-3860")))
+Description: Implements the Bayesian supervised predictive classifiers, hypothesis testing, and parametric estimation under Partition Exchangeability. The two classifiers implemented are a marginal classifier that assumes test data is i.i.d., next to a more computationally costly but accurate simultaneous classifier that finds a labelling for the entire test dataset at once, using all the test data to predict each label. We also provide the Maximum Likelihood Estimation (MLE) of the only underlying parameter of the partition exchangeability generative model as well as hypothesis testing statistics for equality of this parameter with a single value, alternative, or multiple samples. We present functions to simulate the sequences from Ewens Sampling Formula as the realisation of the Poisson-Dirichlet distribution and their respective probabilities.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

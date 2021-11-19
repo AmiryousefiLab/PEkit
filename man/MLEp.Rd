@@ -35,9 +35,8 @@ MLEp(abundance(x))
 }
 \references{
 W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
-1972, Pages 87-112, ISSN 0040-5809, \url{https://doi.org/10.1016/0040-5809(72)90035-4}.
+1972, Pages 87-112, ISSN 0040-5809, <\doi{10.1016/0040-5809(72)90035-4}>.
 }
-\keyword{\eqn{\psi}}
-\keyword{estimate}
-\keyword{likelihood}
-\keyword{maximum}
+\keyword{Estimate}
+\keyword{Likelihood}
+\keyword{Maximum}

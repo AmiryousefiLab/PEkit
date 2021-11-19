@@ -80,7 +80,7 @@ classifier.fit <- function(x, y) {
 #' partition exchangeability. . 2021. <https://arxiv.org/abs/2101.10950>.
 #' @references Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 #' Principles of Bayesian predictive classification revisited. Springer, Stat.
-#' Comput. 23, (2011), 59–73, (<https://doi.org/10.1007/s11222-011-9291-7>).
+#' Comput. 23, (2011), 59–73, (<\doi{10.1007/s11222-011-9291-7}>).
 #' @details
 #' Independently assigns a class label for each test data point according to a
 #' \eqn{maximum \, a \, posteriori} rule. The predictive probability of data point
@@ -189,7 +189,7 @@ tMarLab <- function(training, x) {
 #' partition exchangeability. . 2021. <https://arxiv.org/abs/2101.10950>.
 #' @references Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 #' Principles of Bayesian predictive classification revisited. Springer, Stat.
-#' Comput. 23, (2011), 59–73, (<https://doi.org/10.1007/s11222-011-9291-7>).
+#' Comput. 23, (2011), 59–73, (<\doi{10.1007/s11222-011-9291-7}>).
 #' @examples
 #' ## Create random samples x from Poisson-Dirichlet distributions with different
 #' ## psis, treating each sample as coming from a class of its own:

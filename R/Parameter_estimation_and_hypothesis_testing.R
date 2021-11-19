@@ -3,7 +3,7 @@
 #'
 #' Numerically searches for the MLE of \eqn{\psi} given an abundance vector with a binary search algorithm.
 #' @param abund An abundance vector.
-#' @keywords maximum likelihood estimate \eqn{\psi}
+#' @keywords Maximum Likelihood Estimate
 #' @details Numerically searches for the MLE of \eqn{\psi} as the root of equation
 #' \deqn{K=\sum_{i=1}^n\psi/(\psi+i-1),} where \eqn{K} is the observed number of
 #' different species in the sample. The right side of the equation is monotonically
@@ -13,7 +13,7 @@
 #' @return The MLE of \eqn{\psi}.
 #' @export
 #' @references W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
-#' 1972, Pages 87-112, ISSN 0040-5809, <https://doi.org/10.1016/0040-5809(72)90035-4>.
+#' 1972, Pages 87-112, ISSN 0040-5809, <\doi{10.1016/0040-5809(72)90035-4}>.
 #' @examples
 #' ##Find the MLE of psi of the vector (1,2,2).
 #' ##The frequencies of the frequencies of the data vector are given as input:
@@ -112,7 +112,7 @@ MLEp.bsci<-function(x, level=0.95, rounds=1000, frac=0.8) {
 #' @references Radhakrishna Rao, C, (1948), Large sample tests of statistical
 #' hypotheses concerning several parameters with applications to problems of
 #' estimation. Mathematical Proceedings of the Cambridge Philosophical Society,
-#'  44(1), 50-57. <https://doi.org/10.1017/S0305004100023987>
+#'  44(1), 50-57. <\doi{10.1017/S0305004100023987}>
 #' @keywords score test
 #' @details Calculates the Lagrange Multiplier test statistic \deqn{S\, = \,U(\psi_0)^2 / I(\psi_0),}
 #' where \eqn{U} is the log-likelihood function of \eqn{\psi} and \eqn{I} is its Fisher information.
@@ -159,7 +159,7 @@ sample.test <- function(abund, psi="a") {
 #' @references Neyman, J., & Pearson, E. S. (1933). On the problem of the most
 #' efficient tests of statistical hypotheses. Philosophical Transactions of the
 #' Royal Society of London. Series A, Containing Papers of a Mathematical Or
-#' Physical Character, 231(694-706), 289-337. <doi:10.1098/rsta.1933.0009>.
+#' Physical Character, 231(694-706), 289-337. <\doi{10.1098/rsta.1933.0009}>.
 #' @details Calculates the Likelihood Ratio Test statistic
 #' \deqn{-2log(L(\hat{\psi})/L(\hat{\psi}_1, \hat{\psi}_2)),}
 #' where L is the likelihood function of observing the two input samples given
@@ -246,7 +246,7 @@ two.sample.test<- function(s1 ,s2) {
 #' @references Neyman, J., & Pearson, E. S. (1933). On the problem of the most
 #' efficient tests of statistical hypotheses. Philosophical Transactions of the
 #' Royal Society of London. Series A, Containing Papers of a Mathematical Or
-#' Physical Character, 231(694-706), 289-337. <doi:10.1098/rsta.1933.0009>.
+#' Physical Character, 231(694-706), 289-337. <\doi{10.1098/rsta.1933.0009}>.
 #' @details Calculates the Likelihood Ratio Test statistic
 #' \deqn{-2log(L(\hat{\psi})/L(\hat{\psi}_1, \hat{\psi}_2, ..., \hat{\psi}_d)),}
 #' where L is the likelihood function of observing the \eqn{d} input samples given

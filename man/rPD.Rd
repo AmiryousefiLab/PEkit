@@ -30,10 +30,10 @@ print(c(MLEp(abundance(s1)), MLEp(abundance(s2))))
 }
 \references{
 Hoppe, F.M. The sampling theory of neutral alleles and an urn model in population genetics.
-J. Math. Biology 25, 123–159 (1987). \url{https://doi.org/10.1007/BF00276386}.
+J. Math. Biology 25, 123–159 (1987). <\doi{10.1007/BF00276386}>.
 
 W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
-1972, Pages 87-112, ISSN 0040-5809, \url{https://doi.org/10.1016/0040-5809(72)90035-4}.
+1972, Pages 87-112, ISSN 0040-5809, <\doi{10.1016/0040-5809(72)90035-4}>.
 }
 \keyword{Poisson-Dirichlet}
 \keyword{distribution}

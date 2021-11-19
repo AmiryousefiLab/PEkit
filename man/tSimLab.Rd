@@ -72,7 +72,7 @@ partition exchangeability. . 2021. \url{https://arxiv.org/abs/2101.10950}.
 
 Corander, J., Cui, Y., Koski, T., and Siren, J.: Have I seen you before?
 Principles of Bayesian predictive classification revisited. Springer, Stat.
-Comput. 23, (2011), 59–73, (\url{https://doi.org/10.1007/s11222-011-9291-7}).
+Comput. 23, (2011), 59–73, (<\doi{10.1007/s11222-011-9291-7}>).
 }
 \keyword{Simultaneous}
 \keyword{classifier}

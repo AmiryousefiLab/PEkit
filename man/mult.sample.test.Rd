@@ -45,5 +45,5 @@ mult.sample.test(samples)
 Neyman, J., & Pearson, E. S. (1933). On the problem of the most
 efficient tests of statistical hypotheses. Philosophical Transactions of the
 Royal Society of London. Series A, Containing Papers of a Mathematical Or
-Physical Character, 231(694-706), 289-337. \url{doi:10.1098/rsta.1933.0009}.
+Physical Character, 231(694-706), 289-337. <\doi{10.1098/rsta.1933.0009}>.
 }

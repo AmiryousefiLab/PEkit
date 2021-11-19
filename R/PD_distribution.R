@@ -17,7 +17,7 @@
 #' size of the continuous part \eqn{p_0} of the process, while a low \eqn{\psi} will increase
 #' the size of the discrete parts \eqn{p_{\neq 0}}.
 #' @references W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
-#' 1972, Pages 87-112, ISSN 0040-5809, <https://doi.org/10.1016/0040-5809(72)90035-4>.
+#' 1972, Pages 87-112, ISSN 0040-5809, <\doi{10.1016/0040-5809(72)90035-4}>.
 #' @examples
 #' ## Get a random sample from the Poisson Dirichlet distribution, and
 #' ## find the probability of such a sample with psi=5:
@@ -78,9 +78,9 @@ dlPD <- function(abund, psi="a") {
 #' @keywords Poisson-Dirichlet distribution
 #' @export
 #' @references Hoppe, F.M. The sampling theory of neutral alleles and an urn model in population genetics.
-#'  J. Math. Biology 25, 123–159 (1987). <https://doi.org/10.1007/BF00276386>.
+#'  J. Math. Biology 25, 123–159 (1987). <\doi{10.1007/BF00276386}>.
 #' @references W.J. Ewens, The sampling theory of selectively neutral alleles, Theoretical Population Biology, Volume 3, Issue 1,
-#' 1972, Pages 87-112, ISSN 0040-5809, <https://doi.org/10.1016/0040-5809(72)90035-4>.
+#' 1972, Pages 87-112, ISSN 0040-5809, <\doi{10.1016/0040-5809(72)90035-4}>.
 #' @details Samples random values with a given \eqn{\psi} from the Poisson-Dirichlet distribution by simulating the Hoppe urn model.
 #' @examples
 #' ## Get random sample from the PD distribution with different psi,
